@@ -34,7 +34,7 @@ class PetsController < ApplicationController
 
   post '/pets/:id' do
     @pet = Pet.find(params[:id])
-    @pet.name = params[:name]
+    @pet.name = params[:pet_name]
     @pet.save
     redirect to "pets/#{@pet.id}"
   end
